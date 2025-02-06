@@ -1,143 +1,112 @@
-/* Step 3: Basic styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    line-height: 1.6;
 }
 
-/* Header and navigation bar */
 header {
-    background-color: #007BFF;
+    background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #0056b3;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #004494;
-}
-
-/* Hamburger menu icon */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 14px 20px;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Step 4: Portfolio sections */
-
-/* About Me section */
-#about {
-    text-align: center;
-    padding: 50px 20px;
-    font-size: 1.2em;
-    background-color: #fff;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Projects section */
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.project-card {
-    background-color: #fff;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33% - 40px);
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Skills section */
-#skills {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#skills ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-#skills li {
-    padding: 10px 0;
-    position: relative;
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
 }
 
-#skills li::before {
-    content: '✔';
-    position: absolute;
-    left: -20px;
-    color: green;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Contact Form */
-#contact {
-    padding: 20px;
-    text-align: center;
+nav ul li a:hover {
+    color: #ddd;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
     background-color: #fff;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
+h2 {
+    color: #333;
+}
+
+.project-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 500px;
-    border: 1px solid #ccc;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-card figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e2e2e2;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
     border-radius: 4px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #333;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -145,34 +114,31 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.contact-form button:hover {
+    background-color: #555;
 }
 
-/* Step 5: Responsive design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .project-card {
-        flex: 1 1 100%;
-    }
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
-/* Step 6: Cross-browser compatibility */
-header, nav, button {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
 }
